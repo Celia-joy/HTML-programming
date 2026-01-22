@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Signup page</title>
+        <style>
+           h1{
+            color:darkgreen;
+            text-align:center;
+           } 
+           .signup-box{
+            text-align:center;
+            border:10px solid darkcyan;
+            background-color:beige;
+            border-radius:10px;
+            width:450px;
+            margin-left:500px;
+            margin-top:100px;
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),box-shadow 0.4s ease-in-out
+           }
+           .signup-box:hover{
+            transform:translateY(-5px);
+            box-shadow:0 15px 30px darkgreen;
+           }
+        
+           body{
+            background-color:beige;
+           }
+           .main-nav{
+                text-align:center;
+           }
+            .main-nav a {
+                text-align:center;
+                padding:50px;
+                font-size:32px;
+                text-decoration:none;
+                 font-weight:bold;
+                transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out
+            }
+            .main-nav a:hover{
+                transform:scale(1.1);
+                box-shadow:0 15px 30px darkseagreen;
+            }
+        </style>
+    </head>
+    <body>
+         <header>
+            <nav class="main-nav">
+                <a href="Review_WUI_Courses.html">Home</a>
+                <a href="Review_Table.html">Table</a>
+                <a href="Review_nested_list.html">Rwanda.org</a>
+                <a href="Review_Registration.html">Signup</a>
+                <a href="Review_Conclusion.html">Conclusion</a>
+            </nav>
+        </header>
+        <main>
+     <div class="signup-box">
+        <h1> Want to sign up for free🤔?<br>
+             Please fill this form!</h1>
+        <form action="#" method="get">
+          <div class="form-group">
+            <label for="Firstname">Firstname:</label><br>
+            <br>
+            <input type="text" id="Firstname" name="Firstname" pattern="[a-z A-Z]{8,30}">
+          </div>
+            <br>
+          <div class="form-group">
+            <label for="Lastname">Lastname:</label><br>
+            <br>
+            <input type="file" id="Lastname" name="Lastname">
+          </div>
+            <br>
+          <div class="form-group">  
+            <label for="Email">Email:</label><br>
+            <br>
+            <input type="text" id="Email" name="Email" placeholder="Enter your email">
+          </div>
+            <br>
+          <div class="radio-group">  
+            <label>Gender:</label><br>
+            <br>
+            <input type="radio" name="Gender" value="Male">Male
+            <input type="radio" name="Gender" value="Female"> Female<br>
+          </div>
+          <br>
+          <div class="checkbox-group"> 
+            <label>Languages</label><br>
+            <br>
+            <input type="checkbox" name="Languages" value="Kinyarwanda">Kinyarwanda 
+            <input type="checkbox" name="Languages" value="Kiswahili">Kiswahili
+            <input type="checkbox" name="Languages" value="English">English
+            <input type="checkbox" name="Languages" value="French">French<br>
+          </div>
+            <br>
+          <div class="form-group">   
+            <label for="Level">Level</label><br>
+            <br>
+            <select id="Level" name="Level">
+                <option value="Senior 1">Senior 1</option>
+                <option value="Senior 2">Senior 2</option>
+                <option value="Senior 3">Senior 3</option>
+                <option value="Senior 4">Senior 4</option>
+                <option value="Senior 5">Senior 5</option>
+                <option value="Senior 6">Senior 6</option>
+            </select>
+          </div> 
+          <br>
+          <div class="form-group">  
+            <label for="Password">Password</label><br>
+            <input type="text" id="Password" name="Password">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="Request">Request</label><br>
+            <br>
+            <textarea id="Request" name="Request"></textarea><br>
+            <br>
+            <input type="submit" value="Create account"> 
+          </div>         
+        </form>
+      </div>
+     </main>
+    </body>
+</html>

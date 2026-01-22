@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nested list</title>
+        <style>
+            body{
+                background-color: beige;
+                justify-content:center;
+                margin-top:50px;
+                color:darkgreen;
+            }
+            
+            ol > li {
+                font-weight: bold;
+                text-align:center;
+            }
+            ol{
+                display:flex;
+                justify-content:space-around;
+                margin-top:100px;
+            }
+            ol ol{
+                display:block;
+                margin-top:20px;
+            }
+            .main-nav{
+                text-align:center;
+            }
+            .main-nav a {
+                text-align:center;
+                padding:50px;
+                font-size:32px;
+                text-decoration:none;
+                font-weight:bold;
+                transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out
+            }
+            .main-nav a:hover{
+                transform:scale(1.1);
+                box-shadow:0 15px 30px darkseagreen;
+            }
+            
+        </style>
+    </head>
+    <body>
+         <header>
+            <nav class="main-nav">
+                <a href="Review_WUI_Courses.html">Home</a>
+                <a href="Review_Table.html">Table</a>
+                <a href="Review_nested_list.html">Rwanda.org</a>
+                <a href="Review_Registration.html">Signup</a>
+                <a href="Review_Conclusion.html">Conclusion</a>
+            </nav>
+        </header>
+        <ol>
+            <li>KARONGI
+                <ol type="a">
+                    <li>BWISHYURA</li>
+                    <li>GITESI</li>
+                    <li>MUBUGA</li>
+                    <li>MURAMBI</li>
+                    <li>MURUNDI</li>
+                </ol>
+            </li>
+            <li>NYABIHU
+                <ol type="a">
+                    <li>BIGOGWE</li>
+                    <li>KARABO</li>
+                    <li>JENDA</li>
+                    <li>JOMBA</li>
+                    <li>MUKAMIRA</li>
+                </ol>
+            </li>
+            <li>RUTSIRO
+                <ol type="a">
+                    <li>BONEZA</li>
+                    <li>GIHANGO</li>
+                    <li>KIGEYO</li>
+                    <li>KIVUMU</li>
+                    <li>MANIHIRA</li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>
