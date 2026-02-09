@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> 1. Review on tables</title>
+        <style>
+            
+            table, td, th
+            {
+                border: 1px solid black;
+                border-collapse:collapse; 
+            }
+caption{
+        text-align:center;
+        font-weight: bold;
+        font-size: 28px; 
+}
+table
+{
+width: 80%; 
+    margin: 20px auto;
+}
+body{
+    background-image:url(Table.jpeg);
+    font-size: 24px;
+    font-weight:300;
+    line-height:1.0;
+    justify-content:center;
+}
+main {
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    padding:20px;
+}
+.text-content{
+    margin-right: 20px;
+    text-align:left;
+    max-width: 20%;
+}
+.main-nav{
+    display:flex;
+    justify-content:center;
+    padding: 10px;
+    margin-bottom:20px;
+}
+.main-nav a {
+    font-size:32px;
+    padding: 20px;
+    color:navy;
+    display:inline-block;
+    font-weight:bold;
+    text-decoration:none;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.main-nav a:hover{
+background-color: blanchedalmond;
+color:darkseagreen;
+transform: translateY(-8px) scale(1.05); 
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+border-radius: 5px;
+}
+footer{
+    text-align:center;
+    padding-top:20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+        <nav class="main-nav">
+            <a href="Introduction.html">Introduction</a>
+            <a href="Table.html">Table</a>
+            <a href="Registration.html">Registration</a>
+            <a href="Conclusion.html">Conclusion</a>
+        </nav>
+        </header>
+        <main>
+        <table>
+            
+            <caption>Students with high marks</caption>
+            <tr><th>Number</th><th>Name</th><th>Age</th><th>School</th><th>Marks</th></tr>
+            <tr><td>1</td><td>Ange</td><td>17</td><td>RCA</td><td>98</td></tr> 
+            <tr><td>2</td><td>Anet</td><td>15</td><td>APADE</td><td>97.8</td></tr>
+            <tr><td>3</td><td>Anet</td><td>16</td><td>RCA</td><td>97.6</td></tr>
+        </table> 
+        
+        
+        <h2>List of districts</h2>
+        <table>
+            <tr><th>ID</th><th>Province</th><th>District</th><th>Population</th></tr>
+            <tr>
+                <td>101</td>
+                <td>Kigali City</td>
+                <td>Gasabo</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Kigali City</td>
+                <td>Kicukiro</td>
+                <td>30</td>
+            </tr> 
+            <tr>
+                <td>103</td>
+                <td>Kigali City</td>
+                <td>Nyarugenge</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>201</td>
+                <td>Western Province</td>
+                <td>Nyabihu</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>Western Province</td>
+                <td>Rubavu</td>
+                <td>35</td>
+            </tr>
+            <tr>
+                <th colspan="3">Total</th> 
+                <td>150</td> 
+            </tr> 
+        </table> 
+</main>
+<footer>@ Knowing how to make tables<br> 
+        in HTML is very crucial📊✅
+</footer>
+    </body>
+</html>

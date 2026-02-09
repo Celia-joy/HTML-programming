@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2. Review on Registration</title>
+<style>
+   
+h1{
+    background-color: darkseagreen;
+    text-align:center;
+    padding: 10px 0;
+}
+body{
+    background-color:beige;
+    font-size: 24px;
+    font-weight:300;
+    line-height:1.0;
+}
+main {
+    padding:20px;
+}
+.signup-box {
+    width: 90%;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: black;
+    text-align: center;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s ease-in-out;
+}
+.signup-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.form-group, .radio-group, .checkbox-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+.submit-group {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+.main-nav{
+    display:flex;
+    justify-content:center;
+    padding: 10px;
+    margin-bottom:20px;
+}
+.main-nav a {
+    font-size:32px;
+    padding: 20px;
+    color:navy;
+    display:inline-block;
+    font-weight:bold;
+    text-decoration:none;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.main-nav a:hover{
+background-color: blanchedalmond;
+color:darkseagreen;
+transform: translateY(-8px) scale(1.05);
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+border-radius: 5px;
+}
+
+
+form label, form input, form select, form textarea, form input[type="submit"] {
+    font-size: 20px;
+}
+
+
+form label {
+    display: block;
+    margin-top: 5px;  
+    margin-bottom: 5px;    
+}
+
+
+form input[type="text"],
+form input[type="email"],
+form select {
+    padding: 10px;        
+    border-radius: 5px;  
+    border: 1px solid #ccc;
+   
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+form textarea {
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+form input[type="submit"] {
+    padding: 15px 30px;
+    background-color: darkseagreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+
+form input[type="submit"]:hover {
+    background-color: lightseagreen;
+}
+
+
+form input[type="radio"], form input[type="checkbox"] {
+    margin-right: 10px;
+}
+footer{
+    text-align:center;
+    padding-top:20px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+        <nav class="main-nav">
+            <a href="Introduction.html">Introduction</a>
+            <a href="Table.html">Table</a>
+            <a href="Registration.html">Registration</a>
+            <a href="Conclusion.html">Conclusion</a>
+        </nav>
+        </header>
+        <main>
+       
+    <div class="signup-box">
+         <h1> Want to sign up for free🤔?<br>
+             Please fill this form!</h1>
+       
+        <form action="#" method="GET">
+            <div class="form-group">
+                <label for="firstname">FirstName: </label><input type="text" id="firstname" name="firstname">
+            </div>
+            <div class="form-group">
+                <label for="lastname">LastName: </label><input type="text" id="lastname" name="LastName">
+            </div>
+           <div class="form-group">
+                <label for="email">Email: </label> <input type="email" id="email" name="email">
+            </div>
+           
+            <div class="radio-group">
+                <label>Gender</label><br>
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+
+
+            <div class="checkbox-group">
+                <label>Spoken language</label><br>
+                <input type="checkbox" name="language" value="Kinyarwanda">Kinyarwanda
+                <input type="checkbox" name="language" value="French"> French
+                <input type="checkbox" name="language" value="English"> English
+            </div>
+       
+            <div class="form-group">
+                 <label for= "nationality">Nationality</label>
+                <select id="nationality" name="nationality">
+                    <option value=""> Select nationality </option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="DRC">DRC</option>
+                    <option value="France">France</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="40"></textarea>
+            </div>
+            <div class="submit-group">
+                <input type="submit" value="create account">
+            </div>
+        </form>
+    </div>
+</main>
+             <footer> @Never save your login info.🔒🚫 </footer>  
+</body>
+</html>

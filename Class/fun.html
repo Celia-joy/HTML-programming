@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Homepage Recreation - Our Beach Theme by Derek Abella</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: url('https://lh3.googleusercontent.com/g-eZD8s4oIMFsvgvbguf49pVP-Mi6EWgYHyf7d_szxX59PU2LLTW8YEsCbI6UcqCRTaIG_qhmLc7iB39izeYeY_B7A=s1280-w1280-h800') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: arial, sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            text-align: right;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .header .apps, .header .notifications {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .header .user {
+            width: 32px;
+            height: 32px;
+            background: #4285f4;
+            border-radius: 50%;
+            color: white;
+            font-weight: bold;
+            line-height: 32px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .logo img {
+            /* Placeholder for Google logo - in this theme it's overlaid on background */
+            /* The actual theme uses the illustration as background with white Google text */
+            font-size: 92px;
+            font-family: 'Product Sans', arial, sans-serif;
+            color: white;
+            letter-spacing: -2px;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+            width: 582px;
+            max-width: 90%;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 45px;
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+            font-size: 16px;
+            background: white url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjOUE5QTlBIiBkPSJNMTUuNSAxNGgtLjc5bC0uMjggLjc3QzE1LjQgMTYuMzUgMTYgMTcuOTQgMTYgMjBjMCAyLjYxLTIuMzkgNS01IDVzLTUtMi4zOS01LTVjMC0yLjYxIDIuMzktNSA1LTUgMi42MSAwIDUuMi4zOSA1IDF2LjVoM2MtMS4xIDAtMiAuOS0yIDIgMCAxLjEgLjkgMiAyIDJzMS45LS45IDItMiAyLS45IDItMiAyLTEuOSAyLTIgMCAxLjEtLjkgMi0yIDJ6bS0xLjUgMGMwIDEuMy0xLjEgMi41LTIuNSAyLjUtMS4zIDAtMi41LTEuMS0yLjUtMi41LTEuMyAwLTIuNSAxLjEtMi41IDIuNSAwIDEuMyAxLjEgMi41IDIuNSAyLjV6Ii8+PC9zdmc+') no-repeat 15px center;
+            background-size: 20px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #3c4043;
+        }
+
+        .buttons button:hover {
+            border: 1px solid #dadce0;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        }
+
+        .footer {
+            margin-top: auto;
+            width: 100%;
+            background: rgba(0,0,0,0.1);
+            padding: 10px 20px;
+            text-align: left;
+            color: white;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="#">Gmail</a>
+        <a href="#">Images</a>
+        <span class="apps">⋮</span>
+        <span class="notifications">🔔</span>
+        <span class="user">G</span>
+    </div>
+
+    <div class="logo">
+        <div style="font-size:92px; color:white; font-weight:bold;">Google</div>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Search Google or type a URL" aria-label="Search">
+        <div style="text-align:center; margin-top:10px;">
+            <svg style="width:24px;height:24px;vertical-align:middle;" viewBox="0 0 24 24"><path fill="#4285f4" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            <span style="color:white; margin-left:10px;">AI Mode</span>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
+    </div>
+
+    <div class="footer">
+        Our Beach<br>
+        Artwork by Derek Abella
+    </div>
+</body>
+</html>

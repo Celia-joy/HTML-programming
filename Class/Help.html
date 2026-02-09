@@ -1,0 +1,108 @@
+<!DOCTYPE html>                                                                                                                                           <html lang="en">
+<head>
+       <meta charset="UTF-8">
+  <title>IHIRWE Celia Joy's website-Home </title>
+  
+<style>
+h1
+{
+background-color: yellow;
+text-align: center;
+}
+h2
+{
+background-color:purple;
+text-align: center;    
+}
+body
+{
+background-color:darkblue;
+}
+.main-nav {
+display: flex;
+justify-content: center;
+}
+.main-nav a {
+font-size: 32px;
+color: Orange;
+padding: 0 20px;
+}
+  form {
+    max-width: 500px;
+    margin: 20px auto; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  label {
+    display: block; 
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%; 
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical; 
+  }
+
+  button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+</style>
+</head>
+<body>
+
+    <header>
+    <h1>If you have problems using my website look below</h1>
+
+<nav class="main-nav">
+      <a href="Home.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="Links.html">links</a>
+      <a href="Influence.html">Influence</a>
+      <a href="Contact.html">Contact</a>
+      <a href="Help.html">Help</a>
+      
+    </nav>
+  </header>
+  <main>
+   <h2> How can we help you.</h2>
+   <br><br>
+
+  <label for="email">Your Email:</label>
+  <input type="email" id="email" name="user_email">
+  <br><br>
+
+  <label for="feedback">Your Feedback:</label>
+  <textarea 
+    id="feedback" 
+    name="user_feedback" 
+    rows="6" 
+    cols="50"
+    placeholder="Please share your thoughts, suggestions, or concerns here..."
+    required
+  ></textarea>
+  <br><br>
+<form>
+  <button type="submit">Submit Feedback</button>
+</form>
+
+
+ </main>
+  
+</body>
+</html>
