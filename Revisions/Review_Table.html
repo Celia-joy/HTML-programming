@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Table for cells</title>
+        <style>
+          h1{
+            font-weight:bold;
+            color: antiquewhite;
+            text-align:center;
+            margin-top:100px;
+          }
+          td{
+            border: 1px solid black;
+            border-collapse:collapse;
+          }
+          th{
+           border: 1px solid black;
+           border-collapse:collapse;
+           color:darkgreen;
+            
+          }
+           table{
+            border: 1px solid black;
+            border-collapse:collapse;
+               margin:200px 100px 100px 500px;
+            transition:transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+          }
+          table:hover{
+            transform:scale(1.1);
+            box-shadow:0 15px 30px darkseagreen;
+          }
+          body{
+            background-image: url(Table.jpeg);
+            font-weight:bold;
+            font-size: 24px; 
+            justify-content:center;
+          }
+          .main-nav{
+                text-align:center;
+          }
+        
+            .main-nav a {
+                text-align:center;
+                padding:50px;
+                font-size:32px;
+                text-decoration:none;
+                 font-weight:bold;
+                transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out
+            }
+            .main-nav a:hover{
+                transform:scale(1.1);
+                box-shadow:0 15px 30px darkseagreen;
+            }
+            .svg-container{
+              width:600px;
+              margin-left: auto;
+              margin-right:auto;
+            }
+              svg{
+                display: block;
+                margin: auto;
+                transition:transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+              }
+              svg:hover{
+                transform: scale(1.1);
+                box-shadow:0 15px 30px darkgrey;
+              }   
+        </style>
+    </head>
+    <body>
+       <header>
+            <nav class="main-nav">
+                <a href="Review_WUI_Courses.html">Home</a>
+                <a href="Review_Table.html">Table</a>
+                <a href="Review_nested_list.html">Rwanda.org</a>
+                <a href="Review_Registration.html">Signup</a>
+                <a href="Review_Conclusion.html">Conclusion</a>
+            </nav>
+        </header>
+        <h1>Population in Cell A and B</h1>
+        <table>
+        <tr>
+            <th rowspan="3">Cell</th>
+            <th colspan="2">0-15</th>
+            <th colspan="2">16-35</th>
+            <th colspan="2">36-45</th>
+            <th colspan="2">56-above</th>
+        </tr>
+        <tr>
+            <th>Men</th>
+            <th>Women</th>
+            <th>Men</th>
+            <th>Women</th>
+            <th>Men</th>
+            <th>Women</th>
+            <th>Men</th>
+            <th>Women</th>
+        </tr>
+        <tr>
+          <td>A</td>
+          <td>800</td>
+          <td>700</td>
+          <td>700</td>
+          <td>800</td>
+          <td>900</td>
+          <td>900</td>
+          <td>800</td>
+          <td>800</td>
+        </tr>
+        <tr>
+          <td>B</td>
+          <td>800</td>
+          <td>700</td>
+          <td>700</td>
+          <td>800</td>
+          <td>900</td>
+          <td>900</td>
+          <td>800</td>
+          <td>800</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <th colspan="2">1500</th>
+          <th colspan="2">1500</th>
+          <th colspan="2">1800</th>
+          <th colspan="2">1600</th>
+        </tr>
+      </table>
+      <svg width="600" height="450" viewBox="0 0 500 500">
+        <rect x="50" y="20" width="300" height="200" fill="black" rx="10" ry="10"/>
+        <rect x="60" y="30" width="280" height="180" fill="white"/>
+        <polygon 
+        points=" 40, 220, 360, 220, 380, 380, 20, 380"
+        fill="black"/>
+        <rect x="60" y="210" width="200" height="50" fill="black" rx="3" ry="3"/>
+        <rect x="160" y="310" width="100" height="50"  fill="white" rx="2" ry="2"/>
+        <text  x="70" y="80" font-family="Bodoni MT" fill="darkseagreen">Learn to draw many 
+          <tspan  x ="70" dy= "25">figures using HTML </tspan>
+          <tspan  x ="70" dy= "25">and CSS</tspan></text> 
+      </svg>
+    </body>
+</html>

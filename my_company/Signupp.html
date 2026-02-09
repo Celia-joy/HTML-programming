@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANEZA Chic Boutique - Sign Up</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            background: rgba(0,0,0,0.2);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .signup-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .signup-box {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 3rem;
+            max-width: 500px;
+            width: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .signup-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.4);
+        }
+
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .radio-group,
+        .checkbox-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .radio-group label:first-child,
+        .checkbox-group label:first-child {
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        input[type="radio"] {
+            margin-right: 0.5rem;
+            margin-left: 1rem;
+        }
+
+        input[type="radio"]:first-of-type {
+            margin-left: 0;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        input[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        .form-note {
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        footer {
+            background: rgba(0,0,0,0.2);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="Homep.html">Home</a>
+        <a href="Aboutp.html">About</a>
+        <a href="Signupp.html">Sign Up</a>
+        <a href="Teamp.html">The Team</a>
+        <a href="Conclusion.html">Contact</a>
+    </nav>
+
+    <div class="signup-container">
+        <div class="signup-box">
+            <h1>Want to sign up for free? 🤔<br>Please fill this form!</h1>
+            
+            <form action="#" method="get" enctype="multipart/form-data">
+                <fieldset>
+                <div class="form-group">
+                    <label for="Firstname">First Name</label>
+                    <input type="text" id="Firstname" name="Firstname" >
+                </div>
+
+                <div class="form-group">
+                    <label for="Lastname">Last Name</label>
+                    <input type="text" id="Lastname" name="Lastname">
+                </div>
+
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="email" id="Email" name="Email" >
+                </div>
+               </fieldset>
+                <div class="checkbox-group">
+                    <label>Preferred Language</label>
+                    <div>
+                        <input type="radio" name="Languages" value="Kinyarwanda" id="kiny" required>
+                        <label for="kiny" style="display: inline; font-weight: normal;">Kinyarwanda</label>
+                        <input type="radio" name="Languages" value="Kiswahili" id="kisw">
+                        <label for="kisw" style="display: inline; font-weight: normal;">Kiswahili</label>
+                        <input type="radio" name="Languages" value="English" id="eng">
+                        <label for="eng" style="display: inline; font-weight: normal;">English</label>
+                        <input type="radio" name="Languages" value="French" id="fre">
+                        <label for="fre" style="display: inline; font-weight: normal;">French</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="nationality">Nationality</label>
+                    <select id="nationality" name="nationality" required>
+                        <option value="">Select nationality</option>
+                        <option value="Rwanda">Rwanda</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="DRC">DRC</option>
+                        <option value="France">France</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="reset" id="Password" name="Password" >
+                </div>
+
+                <div class="form-group">
+                    <label for="Request">Special Requests or Questions (Optional)</label>
+                    <textarea id="Request" name="Request"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create Account">
+                </div>
+
+                <p class="form-note">By signing up, you'll get exclusive access to our latest collections and special offers! ✨<br>
+                You will also be able to get some credits on some of our products and be our true client</p>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+         2026 SANEZA Chic Boutique. All rights reserved.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANEZA Chic Boutique - About</title>
+    <style>
+       
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd3 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #8b7355 0%, #6b5644 100%);
+            padding: 1.2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 2rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #f4d4a8;
+            transform: translateY(-2px);
+        }
+
+        /* Content Container */
+        .container {
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            color: #4a3728;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        h1:hover {
+            transform: scale(1.05);
+            color: #6b5644;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #6b5644;
+            margin: 2rem 0 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        h2:hover {
+            color: #8b7355;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #8b7355;
+            margin: 3rem 0 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        h3:hover {
+            color: #a08968;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #5a4636;
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+
+
+        .category-section {
+            margin: 4rem 0;
+            padding: 2rem;
+            background: rgba(255,255,255,0.6);
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            background: #fff;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease, filter 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.15);
+            filter: brightness(1.1);
+        }
+
+
+        footer {
+            background: linear-gradient(135deg, #6b5644 0%, #4a3728 100%);
+            color: #f4d4a8;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="Homep.html">Home</a>
+        <a href="Aboutp.html">About</a>
+        <a href="Signupp.html">Signup</a>
+        <a href="Teamp.html">The Team</a>
+        <a href="Conclusion.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>What We Do</h1>
+        <h2>
+            Firstly we recommend you what your<br>
+            outfit according to the event
+        </h2>
+
+        <div class="category-section">
+            <p><strong>Outfits for Physical Activities</strong></p>
+            <div class="gallery">
+                <div class="gallery-item"><img src="Sportswear1.jpg" alt="Sportswear"></div>
+                <div class="gallery-item"><img src="sports1.jpg" alt="Sports Outfit"></div>
+                <div class="gallery-item"><img src="sports2.jpg" alt="Sports Outfit"></div>
+                <div class="gallery-item"><img src="sports3.jpg" alt="Sports Outfit"></div>
+                <div class="gallery-item"><img src="sports4.jpg" alt="Sports Outfit"></div>
+                <div class="gallery-item"><img src="sports5.jpg" alt="Sports Outfit"></div>
+                <div class="gallery-item"><img src="sports6.jpg" alt="Sports Outfit"></div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <p><strong>Outfits for Parties and Other Celebration Events</strong></p>
+            <div class="gallery">
+                <div class="gallery-item"><img src="party_clothes1.jpg" alt="Party Clothes"></div>
+                <div class="gallery-item"><img src="party1.jpg" alt="Party Outfit"></div>
+                <div class="gallery-item"><img src="party2.jpg" alt="Party Outfit"></div>
+                <div class="gallery-item"><img src="party3.jpg" alt="Party Outfit"></div>
+                <div class="gallery-item"><img src="party4.jpg" alt="Party Outfit"></div>
+                <div class="gallery-item"><img src="party5.jpg" alt="Party Outfit"></div>
+                <div class="gallery-item"><img src="party6.jpg" alt="Party Outfit"></div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <p><strong>Outfits for Going to Church</strong></p>
+            <div class="gallery">
+                <div class="gallery-item"><img src="church_cloth1.jpg" alt="Church Clothes"></div>
+                <div class="gallery-item"><img src="church1.jpg" alt="Church Outfit"></div>
+                <div class="gallery-item"><img src="church2.jpg" alt="Church Outfit"></div>
+                <div class="gallery-item"><img src="church3.jpg" alt="Church Outfit"></div>
+                <div class="gallery-item"><img src="church4.jpg" alt="Church Outfit"></div>
+                <div class="gallery-item"><img src="church6.jpg" alt="Church Outfit"></div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <p><strong>Outfits for Casual Events</strong></p>
+            <div class="gallery">
+                <div class="gallery-item"><img src="cloth1.jpg" alt="Casual Clothes"></div>
+                <div class="gallery-item"><img src="casual1.jpg" alt="Casual Outfit"></div>
+                <div class="gallery-item"><img src="casual2.jpg" alt="Casual Outfit"></div>
+                <div class="gallery-item"><img src="casual3.jpg" alt="Casual Outfit"></div>
+                <div class="gallery-item"><img src="casual4.jpg" alt="Casual Outfit"></div>
+                <div class="gallery-item"><img src="casual5.jpg" alt="Casual Outfit"></div>
+                <div class="gallery-item"><img src="casual6.jpg" alt="Casual Outfit"></div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <p>Even at night you must be well dressed<br>
+                so that maybe your ghost outfit may be<br>
+                the best in all ghosts in case you die that night
+                😂🤣😆😹💀👻<br>
+                (👉 Dress well always… even your ghost must have style 😂👗👻)</p>
+            <div class="gallery">
+                <div class="gallery-item"><img src="Pyjamas2.jpg" alt="Night Wear"></div>
+                <div class="gallery-item"><img src="night1.jpg" alt="Night Outfit"></div>
+                <div class="gallery-item"><img src="night2.jpg" alt="Night Outfit"></div>
+                <div class="gallery-item"><img src="night3.jpg" alt="Night Outfit"></div>
+                <div class="gallery-item"><img src="night4.jpg" alt="Night Outfit"></div>
+                <div class="gallery-item"><img src="night5.jpg" alt="Night Outfit"></div>
+            </div>
+        </div>
+
+        <h2>Secondly we don't only recommend you<br>
+            clothes we also dress you perfectly with jewellry as well as<br>
+            shoes to go and Ride it till it crashes 🏍️💨🔥💥😎<br>
+            and all of that on a reasonable price</h2>
+
+        <div class="category-section">
+            <h3>Shoes May Include</h3>
+            <div class="gallery">
+                <div class="gallery-item"><img src="shoes1.jpg" alt="Shoes"></div>
+                <div class="gallery-item"><img src="shoes3.jpg" alt="Shoes"></div>
+                <div class="gallery-item"><img src="shoes2.jpg" alt="Shoes"></div>
+                <div class="gallery-item"><img src="shoes4.jpg" alt="Shoes"></div>
+                <div class="gallery-item"><img src="shoes5.jpg" alt="Shoes"></div>
+                <div class="gallery-item"><img src="shoes6.jpg" alt="Shoes"></div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3>
+                Women and girls do you want to be recognized in<br>
+                everywhere you go with that hand bag 🤔?<br>
+                SANEZA Chic Boutique is your best option
+            </h3>
+            <div class="gallery">
+                <div class="gallery-item"><img src="sack1.jpg" alt="Handbag"></div>
+                <div class="gallery-item"><img src="sack2.jpg" alt="Handbag"></div>
+                <div class="gallery-item"><img src="sack3.jpg" alt="Handbag"></div>
+                <div class="gallery-item"><img src="sack4.jpg" alt="Handbag"></div>
+                <div class="gallery-item"><img src="sack5.jpg" alt="Handbag"></div>
+                <div class="gallery-item"><img src="sack6.jpg" alt="Handbag"></div>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <h3>See some jewellries that can make you shine like a diamond<br>
+                at a very lower price</h3>
+            <div class="gallery">
+                <div class="gallery-item"><img src="jewe1.jpg" alt="Jewellery"></div>
+                <div class="gallery-item"><img src="jewe2.jpg" alt="Jewellery"></div>
+                <div class="gallery-item"><img src="jewe3.jpg" alt="Jewellery"></div>
+                <div class="gallery-item"><img src="jewe4.jpg" alt="Jewellery"></div>
+                <div class="gallery-item"><img src="jewe5.jpg" alt="Jewellery"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        2026 SANEZA Chic Boutique. All rights reserved.<br>
+        Style with Confidence ✨
+    </footer>
+</body>
+</html>

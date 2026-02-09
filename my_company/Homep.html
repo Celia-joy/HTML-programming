@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANEZA Chic Boutique - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, white, beige 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: linear-gradient(135deg, #8b7355 0%, #6b5644 100%);
+            padding: 1.2rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 32px;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: beige;
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: burlywood;
+            margin-bottom: 24px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        h1:hover {
+            transform: scale(1.05);
+        }
+
+        h2{
+            text-align: center;
+        }
+
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-top: 32px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            background: white;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: linear-gradient(135deg, #6b5644 0%, #4a3728 100%);
+            color: beige;
+            text-align: center;
+            padding: 32px;
+            margin-top: 64px;
+        }
+
+        footer p {
+            font-size: 16px;
+        }
+        .text {
+            text-align: center;
+            padding:48px 16px;
+            max-width: 900px;
+            margin: 0 auto;
+}
+
+      
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="Homep.html">Home</a>
+        <a href="Aboutp.html">About</a>
+        <a href="Signupp.html">Signup</a>
+        <a href="Teamp.html">The Team</a>
+        <a href="Conclusion.html">Contact</a>
+    </nav>
+
+    <div class="text">
+        <h1>Welcome to SANEZA Chic Boutique</h1>
+        <p><strong>Women and girls are you tired of always seeing your friends being<br> 
+            complimented for their outfits but not you? 😩 😣</strong><br><br><br>
+        </p>
+        <p><strong>SANEZA Chic boutique is your solution<br>
+            Haba muri party 🎉, sports🏃,<br>
+            at night🌙, casual events and moments 👕 and even<br> 
+            at church ⛪ hose ugombaa gusa nezaa 💖✨
+        </strong></p>
+        <p><strong>🛍️✨ Take a look at some of our products ✨🛍️<br></strong> </p>
+    </div>
+
+        <h2>Our Featured Collection</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="cloth7.jpg" alt="Casual Wear">
+            </div>
+            <div class="gallery-item">
+                <img src="party_clothes1.jpg" alt="Party Clothes">
+            </div>
+            <div class="gallery-item">
+                <img src="shoes1.jpg" alt="Shoes">
+            </div>
+            <div class="gallery-item">
+                <img src="makeup1.jpg" alt="Makeup">
+            </div>
+            <div class="gallery-item">
+                <img src="jewellry.jpg" alt="Jewellery">
+            </div>
+            <div class="gallery-item">
+                <img src="Pyjamas1.jpg" alt="Pyjamas">
+            </div>
+            <div class="gallery-item">
+                <img src="Sportswear2.jpg" alt="Sportswear">
+            </div>
+            <div class="gallery-item">
+                <img src="church_cloth.jpg" alt="Church Clothes">
+            </div>
+        </div>
+
+    <footer>
+         2026 SANEZA Chic Boutique. All rights reserved.
+        Style with Confidence ✨
+    </footer>
+</body>
+</html>
