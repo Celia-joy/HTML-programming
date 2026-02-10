@@ -79,7 +79,6 @@
 
         .team-member {
             position: relative;
-            overflow: hidden;
             border-radius: 20px;
             background: rgba(255,255,255,0.95);
             box-shadow: 0 8px 30px rgba(0,0,0,0.15);
@@ -130,6 +129,14 @@
         .member-info p {
             font-size: 1.1rem;
             color: papayawhip;
+        }
+        .team-member img{
+            transition: all 0.7s ease;
+        }
+        .team-member:hover img {
+            transform: scale(1.12);
+            filter: brightness(1.1) contrast(1.05);
+            box-shadow: inset 0 0 80px rgba(244, 212, 168,0.6);
         }
 
         

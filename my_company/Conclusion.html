@@ -10,7 +10,70 @@
             background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd3 100%);
             color: #333;
             line-height: 1.6;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow-x: hidden;
         }
+
+        /* ────────────────────────────────────────────────
+           BUBBLES BACKGROUND
+        ──────────────────────────────────────────────── */
+        .bubbles-container {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            left: var(--left, 50%);
+            width: var(--size, 50px);
+            height: var(--size, 50px);
+            background: radial-gradient(
+                circle at 30% 30%,
+                rgba(244, 212, 168, 0.75),
+                rgba(139, 115, 85, 0.35)
+            );
+            border-radius: 50%;
+            opacity: 0.4;
+            box-shadow: 0 0 18px rgba(244, 212, 168, 0.35);
+            animation: floatUp var(--duration, 14s) linear infinite;
+            animation-delay: var(--delay, 0s);
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) translateX(0) rotate(0deg);
+                opacity: 0.4;
+            }
+            30% {
+                transform: translateY(-40vh) translateX(-25px) rotate(12deg);
+            }
+            60% {
+                transform: translateY(-70vh) translateX(35px) rotate(-8deg);
+            }
+            90% {
+                transform: translateY(-105vh) translateX(-20px) rotate(6deg);
+            }
+            100% {
+                transform: translateY(-130vh) translateX(0) rotate(0deg);
+                opacity: 0;
+            }
+        }
+
+        .bubble:nth-child(3n)  { animation: floatUp var(--duration) linear infinite, swayLeft 5s ease-in-out infinite alternate; }
+        .bubble:nth-child(5n)  { animation: floatUp var(--duration) linear infinite, swayRight 6s ease-in-out infinite alternate; }
+
+        @keyframes swayLeft  { from { transform: translateX(-18px); } to { transform: translateX(18px); } }
+        @keyframes swayRight { from { transform: translateX(18px); } to { transform: translateX(-18px); } }
+
+        /* ────────────────────────────────────────────────
+           Original styles (with minor readability improvements)
+        ──────────────────────────────────────────────── */
 
         nav {
             background: linear-gradient(135deg, #8b7355 0%, #6b5644 100%);
@@ -19,12 +82,13 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            text-align: center;
         }
 
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 2rem;
+            margin: 0 1.8rem;
             font-size: 1.1rem;
             font-weight: 500;
             letter-spacing: 0.5px;
@@ -41,6 +105,8 @@
             max-width: 1400px;
             margin: 3rem auto;
             padding: 0 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         h1 {
@@ -79,10 +145,11 @@
 
         .contact-section {
             margin: 4rem 0;
-            padding: 2rem;
-            background: rgba(255,255,255,0.6);
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            background: rgba(255,255,255,0.82);     /* increased opacity for better readability */
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            backdrop-filter: blur(6px);             /* nice glass effect */
         }
 
         .contact-info {
@@ -90,6 +157,11 @@
             flex-direction: column;
             align-items: center;
             gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
         }
 
         .contact-info a {
@@ -105,16 +177,16 @@
 
         form {
             max-width: 600px;
-            margin: 2rem auto;
+            margin: 0 auto;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
         }
 
         label {
             display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             color: #555;
             font-weight: 600;
         }
@@ -123,9 +195,9 @@
         input[type="email"],
         textarea {
             width: 100%;
-            padding: 0.8rem;
+            padding: 0.9rem;
             border: 2px solid #e0e0e0;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 1rem;
             transition: all 0.3s ease;
             font-family: inherit;
@@ -136,42 +208,59 @@
         textarea:focus {
             outline: none;
             border-color: #8b7355;
-            box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+            box-shadow: 0 0 0 4px rgba(139, 115, 85, 0.15);
         }
 
         textarea {
             resize: vertical;
-            min-height: 150px;
+            min-height: 160px;
         }
 
         input[type="submit"] {
             width: 100%;
-            padding: 1rem;
+            padding: 1.1rem;
             background: linear-gradient(135deg, #8b7355 0%, #6b5644 100%);
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 1.1rem;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.35s ease;
         }
 
         input[type="submit"]:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(107, 86, 68, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(107, 86, 68, 0.3);
         }
 
         footer {
             background: linear-gradient(135deg, #6b5644 0%, #4a3728 100%);
             color: #f4d4a8;
             text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
+            padding: 2.5rem 1rem;
+            margin-top: 5rem;
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
+
+    <!-- Floating bubbles background -->
+    <div class="bubbles-container">
+        <div class="bubble" style="--size: 40px; --left: 10%; --duration: 12s; --delay: 0s;"></div>
+        <div class="bubble" style="--size: 60px; --left: 25%; --duration: 15s; --delay: 2s;"></div>
+        <div class="bubble" style="--size: 30px; --left: 40%; --duration: 10s; --delay: 4s;"></div>
+        <div class="bubble" style="--size: 80px; --left: 55%; --duration: 18s; --delay: 1s;"></div>
+        <div class="bubble" style="--size: 50px; --left: 70%; --duration: 14s; --delay: 6s;"></div>
+        <div class="bubble" style="--size: 35px; --left: 15%; --duration: 13s; --delay: 3s;"></div>
+        <div class="bubble" style="--size: 70px; --left: 85%; --duration: 16s; --delay: 5s;"></div>
+        <div class="bubble" style="--size: 45px; --left: 30%; --duration: 11s; --delay: 7s;"></div>
+        <div class="bubble" style="--size: 55px; --left: 60%; --duration: 17s; --delay: 8s;"></div>
+        <div class="bubble" style="--size: 25px; --left: 75%; --duration: 9s; --delay: 9s;"></div>
+    </div>
+
     <nav>
         <a href="Homep.html">Home</a>
         <a href="Aboutp.html">About</a>
@@ -224,5 +313,6 @@
         2026 SANEZA Chic Boutique. All rights reserved.<br>
         Style with Confidence ✨
     </footer>
+
 </body>
 </html>

@@ -51,6 +51,29 @@
             background: rgba(255,255,255,0.2);
             transform: translateY(-2px);
         }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #8b7355;
+            box-shadow: 0 0 0 4px rgba(139, 115, 85, 0.18);
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+        input[type="submit"] {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        input[type="submit"]:hover {
+            transform: translateY(-3px) scale(1.04);
+            box-shadow: 0 12px 30px rgba(107, 86, 68, 0.35);
+            animation: buttonPulse 1.8s infinite;
+        }
+        @keyframes buttonPulse {
+            0%, 100% { 
+                box-shadow: 0 0 0 0 rgba(139, 115, 85, 0.4);
+             }
+            70%      { 
+                box-shadow: 0 0 0 15px rgba(139, 115, 85, 0);
+             }
+        }
 
         .signup-container {
             flex: 1;
@@ -196,7 +219,7 @@
         <div class="signup-box">
             <h1>Want to sign up for free? 🤔<br>Please fill this form!</h1>
             
-            <form action="#" method="get" enctype="multipart/form-data">
+            <form action="#" method="get">
                 <fieldset>
                 <div class="form-group">
                     <label for="Firstname">First Name</label>
