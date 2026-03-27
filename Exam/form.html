@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration Form</title>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --green-dark: #1a4d2e;
+                --green-mid: #2d6a4f;
+                --green-light: #52b788;
+                --green-pale: #d8f3dc;
+                --cream: #faf9f6;
+                --text: #1c1c1c;
+                --muted: #6b7280;
+                --border: #c8e6c9;
+                --shadow: 0 8px 40px rgba(26, 77, 46, 0.12);
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: var(--cream);
+                background-image:
+                    radial-gradient(ellipse at 20% 10%, rgba(82, 183, 136, 0.12) 0%, transparent 50%),
+                    radial-gradient(ellipse at 80% 90%, rgba(45, 106, 79, 0.1) 0%, transparent 50%);
+                min-height: 100vh;
+                padding: 48px 20px;
+                font-family: 'DM Sans', sans-serif;
+                color: var(--text);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.4rem;
+                color: var(--green-dark);
+                margin-bottom: 8px;
+                letter-spacing: -0.5px;
+            }
+
+            .subtitle {
+                color: var(--muted);
+                font-size: 0.95rem;
+                font-weight: 300;
+                margin-bottom: 36px;
+            }
+
+            .form-box {
+                background: #ffffff;
+                border: 1.5px solid var(--border);
+                border-radius: 20px;
+                padding: 40px 44px;
+                max-width: 480px;
+                width: 100%;
+                box-shadow: var(--shadow);
+                animation: slideUp 0.5s ease both;
+            }
+
+            @keyframes slideUp {
+                from { opacity: 0; transform: translateY(24px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+
+            .field {
+                margin-bottom: 22px;
+            }
+
+            label {
+                display: block;
+                font-size: 0.82rem;
+                font-weight: 500;
+                color: var(--green-dark);
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+                margin-bottom: 7px;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="password"],
+            select {
+                width: 100%;
+                padding: 11px 14px;
+                border: 1.5px solid var(--border);
+                border-radius: 10px;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 0.95rem;
+                color: var(--text);
+                background: var(--cream);
+                transition: border-color 0.2s, box-shadow 0.2s;
+                outline: none;
+            }
+
+            input[type="text"]:focus,
+            input[type="email"]:focus,
+            input[type="password"]:focus,
+            select:focus {
+                border-color: var(--green-light);
+                box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.18);
+                background: #fff;
+            }
+
+            select {
+                appearance: none;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232d6a4f' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 14px center;
+                padding-right: 36px;
+                cursor: pointer;
+            }
+
+            /* Radio & Checkbox group */
+            .radio-group, .checkbox-group {
+                display: flex;
+                flex-direction: column;
+                gap: 9px;
+                margin-top: 2px;
+            }
+
+            .radio-group {
+                flex-direction: row;
+                gap: 20px;
+            }
+
+            .radio-group label,
+            .checkbox-group label {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 0.93rem;
+                font-weight: 400;
+                color: var(--text);
+                text-transform: none;
+                letter-spacing: 0;
+                cursor: pointer;
+            }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+                appearance: none;
+                width: 18px;
+                height: 18px;
+                border: 2px solid var(--border);
+                background: var(--cream);
+                cursor: pointer;
+                transition: all 0.15s;
+                flex-shrink: 0;
+            }
+
+            input[type="radio"] {
+                border-radius: 50%;
+            }
+
+            input[type="checkbox"] {
+                border-radius: 5px;
+            }
+
+            input[type="radio"]:checked,
+            input[type="checkbox"]:checked {
+                background: var(--green-mid);
+                border-color: var(--green-mid);
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3E%3Cpath d='M1 4l3 3 5-6' stroke='white' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            input[type="radio"]:checked {
+                background-image: none;
+                box-shadow: inset 0 0 0 4px white, inset 0 0 0 9px var(--green-mid);
+            }
+
+            .divider {
+                height: 1px;
+                background: var(--green-pale);
+                margin: 28px 0;
+            }
+
+            button[type="submit"] {
+                width: 100%;
+                padding: 13px;
+                background: var(--green-dark);
+                color: #fff;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 0.95rem;
+                font-weight: 500;
+                letter-spacing: 0.04em;
+                border: none;
+                border-radius: 12px;
+                cursor: pointer;
+                transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+                margin-top: 8px;
+                box-shadow: 0 4px 14px rgba(26, 77, 46, 0.25);
+            }
+
+            button[type="submit"]:hover {
+                background: var(--green-mid);
+                box-shadow: 0 6px 20px rgba(26, 77, 46, 0.3);
+            }
+
+            button[type="submit"]:active {
+                transform: scale(0.98);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <p class="subtitle">Fill in your details to get started</p>
+
+        <div class="form-box">
+            <form action="#" method="post">
+
+                <div class="field">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="e.g. IHIRWE" required>
+                </div>
+
+                <div class="field">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="e.g. Celia Joy" required>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="field">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="gender" value="Male" required> Male
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="Female"> Female
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Spoken Languages</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="Slanguages" value="Kinyarwanda"> Kinyarwanda</label>
+                        <label><input type="checkbox" name="Slanguages" value="Kiswahili"> Kiswahili</label>
+                        <label><input type="checkbox" name="Slanguages" value="English"> English</label>
+                        <label><input type="checkbox" name="Slanguages" value="French"> French</label>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="class">Class</label>
+                    <select id="class" name="class">
+                        <option value="Year 1">Year 1</option>
+                        <option value="Year 2">Year 2</option>
+                        <option value="Year 3">Year 3</option>
+                    </select>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+
+                <button type="submit">Create Account</button>
+            </form>
+        </div>
+    </body>
+</html>
