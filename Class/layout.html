@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <title>Document</title>  
+        <style>
+            *{
+                margin:0;
+                padding:0;
+            }
+            #header{
+                width:100%;
+                background-color: rgb(101, 145, 210);
+                min-height: 10vh;
+            }
+            #leftsidebar{
+                width:20%;
+                background-color: gray;
+                min-height: 80vh;
+            }
+            #middle{
+                width:60%;
+                background-color: dodgerblue;
+                min-height: 80vh;
+            }
+            #rightsidebar{
+                width:20%;
+                background-color: rgb(215,121, 6);
+                min-height: 80vh;
+            }
+            #footer{
+                width:100%;
+                background-color: beige;
+                min-height: 10vh;
+            }
+            #leftsidebar, #middle, #rightsidebar{
+                float:left;
+            }
+            footer{
+                clear:left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div id="header">Heading</div>
+            <div id="leftsidebar">sidebar</div>
+            <div id="middle">Body</div>
+            <div id="rightsidebar">sidebar</div>            
+            <div id="footer">Footer</div>
+
+        </div>
+        
+    </body>
+</html>
