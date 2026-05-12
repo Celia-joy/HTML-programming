@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HP Layout – Float</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; font-size: 14px; color: #333; background: #fff; }
+
+    /* ── TOP BAR ── */
+    #top-bar {
+      background: #222;
+      color: #ccc;
+      font-size: 12px;
+      overflow: hidden;
+      padding: 5px 40px;
+    }
+    #top-bar .tb-left  { float: left; }
+    #top-bar .tb-right { float: right; }
+    #top-bar a { color: #ccc; text-decoration: none; margin-left: 14px; }
+    #top-bar a:hover { color: #fff; }
+
+    /* ── HEADER ── */
+    #header {
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      overflow: hidden;
+      padding: 14px 40px;
+    }
+    #logo {
+      float: left;
+      font-size: 34px;
+      font-weight: bold;
+      color: #0096d6;
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+    #header-right { float: right; }
+    #header-right .icon-btn {
+      float: left;
+      margin-left: 18px;
+      font-size: 13px;
+      color: #444;
+      text-decoration: none;
+      padding: 6px 0;
+      cursor: pointer;
+    }
+    #header-right .icon-btn:hover { color: #0096d6; }
+    #search-wrap {
+      float: right;
+      clear: right;
+      margin-top: 8px;
+    }
+    #search-wrap input {
+      width: 260px;
+      height: 32px;
+      border: 1px solid #ccc;
+      border-radius: 16px 0 0 16px;
+      padding: 0 14px;
+      outline: none;
+      font-size: 13px;
+    }
+    #search-wrap button {
+      height: 32px;
+      width: 36px;
+      border: 1px solid #ccc;
+      border-left: none;
+      border-radius: 0 16px 16px 0;
+      background: #f5f5f5;
+      cursor: pointer;
+    }
+
+    /* ── NAV ── */
+    #nav {
+      background: #0096d6;
+      overflow: hidden;
+      padding: 0 40px;
+    }
+    #nav a {
+      float: left;
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      padding: 13px 18px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    #nav a:hover { background: #007ab8; }
+
+    /* ── HERO BANNER ── */
+    #hero {
+      background: linear-gradient(135deg, #003087 0%, #0096d6 60%, #00b0f0 100%);
+      overflow: hidden;
+      padding: 60px 40px;
+      min-height: 340px;
+    }
+    #hero-text {
+      float: left;
+      width: 50%;
+      color: #fff;
+      padding-top: 20px;
+    }
+    #hero-text .eyebrow {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: .8;
+      margin-bottom: 14px;
+    }
+    #hero-text h1 { font-size: 38px; font-weight: bold; line-height: 1.2; margin-bottom: 18px; }
+    #hero-text p  { font-size: 15px; opacity: .9; margin-bottom: 28px; line-height: 1.6; }
+    #hero-text .btn-hero {
+      display: inline-block;
+      background: #fff;
+      color: #0096d6;
+      padding: 12px 28px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    #hero-text .btn-hero:hover { background: #e8f5fd; }
+    #hero-image {
+      float: right;
+      width: 45%;
+      text-align: center;
+    }
+    .laptop-placeholder {
+      width: 100%;
+      padding-top: 65%;
+      background: rgba(255,255,255,.15);
+      border-radius: 12px;
+      position: relative;
+    }
+    .laptop-placeholder::after {
+      content: "💻";
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 80px;
+    }
+
+    /* ── PROMO STRIPS (3 equal columns) ── */
+    #promo-strip {
+      background: #f5f5f5;
+      overflow: hidden;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .promo-col {
+      float: left;
+      width: 33.33%;
+      padding: 20px 28px;
+      border-right: 1px solid #e0e0e0;
+      text-align: center;
+      font-size: 13px;
+    }
+    .promo-col:last-child { border-right: none; }
+    .promo-col strong { display: block; margin-bottom: 4px; font-size: 14px; }
+    .promo-col a { color: #0096d6; text-decoration: none; }
+
+    /* ── SECTION HEADING ── */
+    .section-heading {
+      text-align: center;
+      padding: 36px 40px 8px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #222;
+    }
+    .section-sub {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    /* ── PRODUCT CARDS (4 columns) ── */
+    #products {
+      overflow: hidden;
+      padding: 0 40px 40px;
+    }
+    .product-card {
+      float: left;
+      width: 23%;
+      margin-right: 2.6%;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: box-shadow .2s;
+    }
+    .product-card:last-child { margin-right: 0; }
+    .product-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,.12); }
+    .product-img {
+      width: 100%;
+      padding-top: 70%;
+      border-radius: 4px;
+      margin-bottom: 14px;
+    }
+    .product-card:nth-child(1) .product-img { background: #ddeeff; }
+    .product-card:nth-child(2) .product-img { background: #ffeedd; }
+    .product-card:nth-child(3) .product-img { background: #eeffdd; }
+    .product-card:nth-child(4) .product-img { background: #ffeeff; }
+    .product-icon {
+      font-size: 48px;
+      display: block;
+      margin: -60px auto 14px;
+    }
+    .product-name  { font-size: 14px; font-weight: bold; color: #222; margin-bottom: 6px; }
+    .product-price { font-size: 18px; font-weight: bold; color: #0096d6; margin-bottom: 12px; }
+    .product-desc  { font-size: 12px; color: #666; margin-bottom: 14px; line-height: 1.5; }
+    .btn-buy {
+      display: inline-block;
+      background: #0096d6;
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .btn-buy:hover { background: #007ab8; }
+
+    /* ── SUPPORT STRIP ── */
+    #support {
+      background: #003087;
+      overflow: hidden;
+      padding: 36px 40px;
+      text-align: center;
+    }
+    #support h2 { color: #fff; font-size: 22px; margin-bottom: 10px; }
+    #support p  { color: #99ccee; font-size: 14px; margin-bottom: 20px; }
+    #support .btn-support {
+      display: inline-block;
+      background: #fff;
+      color: #003087;
+      padding: 10px 24px;
+      border-radius: 4px;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+    #support .btn-support:hover { background: #e8eef6; }
+
+    /* ── FOOTER ── */
+    #footer {
+      background: #222;
+      color: #aaa;
+      overflow: hidden;
+      padding: 32px 40px 20px;
+    }
+    .footer-col {
+      float: left;
+      width: 20%;
+      padding-right: 20px;
+      margin-bottom: 20px;
+    }
+    .footer-col h4 { color: #fff; font-size: 13px; margin-bottom: 12px; }
+    .footer-col a  {
+      display: block;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+    .footer-col a:hover { color: #fff; }
+    #footer-bottom {
+      clear: both;
+      border-top: 1px solid #444;
+      padding-top: 16px;
+      font-size: 11px;
+      color: #777;
+      overflow: hidden;
+    }
+    #footer-bottom .fb-left  { float: left; }
+    #footer-bottom .fb-right { float: right; }
+
+    /* clearfix */
+    .cf::after { content: ""; display: table; clear: both; }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="top-bar" class="cf">
+  <div class="tb-left">HP Store &nbsp;|&nbsp; Business Store</div>
+  <div class="tb-right">
+    <a href="#">Sign In</a>
+    <a href="#">Track Order</a>
+    <a href="#">Support</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div id="header" class="cf">
+  <div id="logo">hp</div>
+  <div id="header-right" class="cf">
+    <a class="icon-btn" href="#">🛒 Cart (0)</a>
+    <a class="icon-btn" href="#">❤ Wishlist</a>
+    <a class="icon-btn" href="#">👤 Account</a>
+    <div class="search-wrap cf">
+      <input type="text" placeholder="Search HP products…" />
+      <button>🔍</button>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div id="nav">
+  <a href="#">Laptops</a>
+  <a href="#">Desktops</a>
+  <a href="#">Printers</a>
+  <a href="#">Monitors</a>
+  <a href="#">Accessories</a>
+  <a href="#">Gaming</a>
+  <a href="#">Deals</a>
+  <a href="#">Business</a>
+  <a href="#">Support</a>
+</div>
+
+<!-- HERO -->
+<div id="hero" class="cf">
+  <div id="hero-text">
+    <div class="eyebrow">New Arrival 2025</div>
+    <h1>HP Spectre x360<br>The Ultimate Laptop</h1>
+    <p>Experience stunning OLED display, Intel Core Ultra 7 processor, and all-day battery life in a sleek, 2-in-1 design.</p>
+    <a class="btn-hero" href="#">Shop Now</a>
+  </div>
+  <div id="hero-image">
+    <div class="laptop-placeholder"></div>
+  </div>
+</div>
+
+<!-- PROMO STRIP -->
+<div id="promo-strip" class="cf">
+  <div class="promo-col">
+    🚚 <strong>Free Shipping</strong>
+    On orders over $35 · <a href="#">Learn more</a>
+  </div>
+  <div class="promo-col">
+    🔄 <strong>Easy Returns</strong>
+    30-day hassle-free returns · <a href="#">Details</a>
+  </div>
+  <div class="promo-col">
+    🛡 <strong>HP Care Pack</strong>
+    Extended warranty options available · <a href="#">Add protection</a>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<div class="section-heading">Featured Products</div>
+<div class="section-sub">Best-selling laptops, printers, and accessories</div>
+
+<div id="products" class="cf">
+
+  <div class="product-card">
+    <div class="product-img"></div>
+    <div style="font-size:36px;margin-bottom:8px;">💻</div>
+    <div class="product-name">HP Envy 15</div>
+    <div class="product-price">$999.99</div>
+    <div class="product-desc">15.6" FHD IPS, Intel Core i7-1355U, 16 GB RAM, 512 GB SSD</div>
+    <a class="btn-buy" href="#">Add to Cart</a>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img"></div>
+    <div style="font-size:36px;margin-bottom:8px;">🖨</div>
+    <div class="product-name">HP OfficeJet Pro 9015e</div>
+    <div class="product-price">$249.99</div>
+    <div class="product-desc">All-in-one printer, duplex printing, wireless, smart home office</div>
+    <a class="btn-buy" href="#">Add to Cart</a>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img"></div>
+    <div style="font-size:36px;margin-bottom:8px;">🖥</div>
+    <div class="product-name">HP Pavilion 27" Monitor</div>
+    <div class="product-price">$329.99</div>
+    <div class="product-desc">4K UHD IPS, 60 Hz, USB-C, built-in speakers, anti-glare</div>
+    <a class="btn-buy" href="#">Add to Cart</a>
+  </div>
+
+  <div class="product-card">
+    <div class="product-img"></div>
+    <div style="font-size:36px;margin-bottom:8px;">🎮</div>
+    <div class="product-name">HP OMEN 16 Gaming</div>
+    <div class="product-price">$1,299.99</div>
+    <div class="product-desc">16.1" 165 Hz QHD, RTX 4070, AMD Ryzen 7, 32 GB RAM</div>
+    <a class="btn-buy" href="#">Add to Cart</a>
+  </div>
+
+</div>
+
+<!-- SUPPORT STRIP -->
+<div id="support">
+  <h2>Need Help? We're Here.</h2>
+  <p>Get expert support for your HP products — 24/7 online or by phone.</p>
+  <a class="btn-support" href="#">Chat with Support</a>
+  <a class="btn-support" href="#">Find a Service Center</a>
+  <a class="btn-support" href="#">Diagnose My Product</a>
+</div>
+
+<!-- FOOTER -->
+<div id="footer" class="cf">
+  <div class="footer-col">
+    <h4>Laptops & Computers</h4>
+    <a href="#">HP Spectre</a>
+    <a href="#">HP Envy</a>
+    <a href="#">HP Pavilion</a>
+    <a href="#">HP EliteBook</a>
+    <a href="#">HP OMEN Gaming</a>
+  </div>
+  <div class="footer-col">
+    <h4>Printers</h4>
+    <a href="#">HP OfficeJet</a>
+    <a href="#">HP DeskJet</a>
+    <a href="#">HP LaserJet</a>
+    <a href="#">HP ENVY Inspire</a>
+    <a href="#">HP Instant Ink</a>
+  </div>
+  <div class="footer-col">
+    <h4>Accessories</h4>
+    <a href="#">Monitors</a>
+    <a href="#">Keyboards & Mice</a>
+    <a href="#">Headsets</a>
+    <a href="#">Bags & Cases</a>
+    <a href="#">Ink & Toner</a>
+  </div>
+  <div class="footer-col">
+    <h4>Support</h4>
+    <a href="#">HP Support Assistant</a>
+    <a href="#">Drivers & Downloads</a>
+    <a href="#">Warranty Check</a>
+    <a href="#">Contact Support</a>
+    <a href="#">Community Forums</a>
+  </div>
+  <div class="footer-col">
+    <h4>Company</h4>
+    <a href="#">About HP</a>
+    <a href="#">Sustainability</a>
+    <a href="#">Investor Relations</a>
+    <a href="#">Careers</a>
+    <a href="#">Newsroom</a>
+  </div>
+
+  <div id="footer-bottom">
+    <div class="fb-left">© 2025 HP Inc. All rights reserved.</div>
+    <div class="fb-right">
+      Privacy Policy &nbsp;|&nbsp; Terms of Use &nbsp;|&nbsp; Cookie Settings
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

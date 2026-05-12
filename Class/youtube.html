@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>YouTube Layout – Float</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #f9f9f9; font-family: Arial, sans-serif; font-size: 14px; }
+
+    /* ── HEADER ── */
+    #header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+      height: 56px;
+      width: 100%;
+      overflow: hidden;   /* clearfix */
+    }
+    #logo {
+      float: left;
+      padding: 10px 16px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #ff0000;
+      line-height: 36px;
+    }
+    #logo span { color: #282828; }
+    #search-bar {
+      float: left;
+      margin-top: 10px;
+      margin-left: 60px;
+    }
+    #search-bar input {
+      width: 420px;
+      height: 36px;
+      border: 1px solid #ccc;
+      border-radius: 2px 0 0 2px;
+      padding: 0 12px;
+      font-size: 14px;
+      outline: none;
+    }
+    #search-bar button {
+      height: 36px;
+      width: 64px;
+      border: 1px solid #ccc;
+      border-left: none;
+      border-radius: 0 2px 2px 0;
+      background: #f8f8f8;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #header-icons {
+      float: right;
+      margin-top: 10px;
+      margin-right: 16px;
+    }
+    #header-icons button {
+      background: #ff0000;
+      color: #fff;
+      border: none;
+      border-radius: 2px;
+      height: 36px;
+      padding: 0 12px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* ── WRAPPER (sidebar + content side by side) ── */
+    #wrapper { overflow: hidden; }
+
+    /* ── SIDEBAR ── */
+    #sidebar {
+      float: left;
+      width: 200px;
+      background: #fff;
+      min-height: calc(100vh - 56px);
+      border-right: 1px solid #e5e5e5;
+      padding-top: 8px;
+    }
+    .side-item {
+      padding: 10px 24px;
+      color: #282828;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .side-item:hover { background: #f2f2f2; }
+    .side-item.active { background: #f2f2f2; font-weight: bold; }
+    .side-section {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 8px;
+      padding-top: 8px;
+    }
+    .side-label {
+      padding: 8px 24px 4px;
+      font-size: 11px;
+      font-weight: bold;
+      color: #606060;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    /* ── MAIN CONTENT ── */
+    #main {
+      float: left;
+      width: calc(100% - 200px);
+      padding: 20px 24px;
+    }
+
+    /* chip filters */
+    #filters {
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+    .chip {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 8px;
+      background: #f2f2f2;
+      border: none;
+      border-radius: 16px;
+      padding: 6px 14px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .chip.active { background: #282828; color: #fff; }
+    .chip:hover { background: #e0e0e0; }
+    .chip.active:hover { background: #444; }
+
+    /* video grid — 4 columns with float */
+    #video-grid { overflow: hidden; }
+    .video-card {
+      float: left;
+      width: 23%;
+      margin-right: 2%;
+      margin-bottom: 24px;
+      cursor: pointer;
+    }
+    .video-card:nth-child(4n) { margin-right: 0; }
+    .thumbnail {
+      width: 100%;
+      padding-top: 56.25%;   /* 16:9 */
+      background: #ccc;
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* coloured placeholder thumbnails */
+    .video-card:nth-child(1)  .thumbnail { background: #3d5a8a; }
+    .video-card:nth-child(2)  .thumbnail { background: #8a3d3d; }
+    .video-card:nth-child(3)  .thumbnail { background: #3d8a55; }
+    .video-card:nth-child(4)  .thumbnail { background: #7a3d8a; }
+    .video-card:nth-child(5)  .thumbnail { background: #8a6c3d; }
+    .video-card:nth-child(6)  .thumbnail { background: #3d7a8a; }
+    .video-card:nth-child(7)  .thumbnail { background: #8a3d6c; }
+    .video-card:nth-child(8)  .thumbnail { background: #4a8a3d; }
+    .video-card:nth-child(9)  .thumbnail { background: #8a7a3d; }
+    .video-card:nth-child(10) .thumbnail { background: #3d3d8a; }
+    .video-card:nth-child(11) .thumbnail { background: #8a4a3d; }
+    .video-card:nth-child(12) .thumbnail { background: #3d8a7a; }
+
+    .duration {
+      position: absolute;
+      bottom: 6px; right: 8px;
+      background: rgba(0,0,0,.75);
+      color: #fff;
+      font-size: 11px;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+    .card-meta { overflow: hidden; margin-top: 10px; }
+    .avatar {
+      float: left;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: #aaa;
+      margin-right: 10px;
+    }
+    .video-card:nth-child(odd)  .avatar { background: #ff7043; }
+    .video-card:nth-child(even) .avatar { background: #42a5f5; }
+    .video-info { float: left; width: calc(100% - 46px); }
+    .video-title { font-size: 13px; font-weight: bold; color: #0f0f0f; line-height: 1.4; }
+    .channel-name { font-size: 12px; color: #606060; margin-top: 3px; }
+    .video-stats  { font-size: 12px; color: #606060; }
+
+    /* clearfix utility */
+    .cf::after { content: ""; display: table; clear: both; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div id="header">
+  <div id="logo">&#9654; <span>YouTube</span></div>
+  <div id="search-bar">
+    <input type="text" placeholder="Search" />
+    <button>&#128269;</button>
+  </div>
+  <div id="header-icons">
+    <button>Sign in</button>
+  </div>
+</div>
+
+<!-- WRAPPER -->
+<div id="wrapper" class="cf">
+
+  <!-- SIDEBAR -->
+  <div id="sidebar">
+    <div class="side-item active">&#127968; Home</div>
+    <div class="side-item">&#128247; Shorts</div>
+    <div class="side-item">&#128250; Subscriptions</div>
+
+    <div class="side-section">
+      <div class="side-label">You</div>
+      <div class="side-item">&#128218; History</div>
+      <div class="side-item">&#9654; Your videos</div>
+      <div class="side-item">&#128190; Downloads</div>
+      <div class="side-item">&#128276; Watch later</div>
+      <div class="side-item">&#128077; Liked videos</div>
+    </div>
+
+    <div class="side-section">
+      <div class="side-label">Explore</div>
+      <div class="side-item">&#128293; Trending</div>
+      <div class="side-item">&#127925; Music</div>
+      <div class="side-item">&#127917; Gaming</div>
+      <div class="side-item">&#128240; News</div>
+      <div class="side-item">&#9917; Sports</div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div id="main">
+
+    <!-- Filter chips -->
+    <div id="filters" class="cf">
+      <button class="chip active">All</button>
+      <button class="chip">Music</button>
+      <button class="chip">Gaming</button>
+      <button class="chip">News</button>
+      <button class="chip">Live</button>
+      <button class="chip">Cooking</button>
+      <button class="chip">Technology</button>
+      <button class="chip">Sports</button>
+      <button class="chip">Recently uploaded</button>
+      <button class="chip">Watched</button>
+    </div>
+
+    <!-- Video grid -->
+    <div id="video-grid" class="cf">
+
+      <!-- 12 video cards -->
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">12:34</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">How to Build a Website from Scratch</div>
+            <div class="channel-name">CodeWithMe</div>
+            <div class="video-stats">1.2M views · 3 days ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">8:20</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">Top 10 Travel Destinations in 2025</div>
+            <div class="channel-name">WanderWorld</div>
+            <div class="video-stats">890K views · 1 week ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">20:05</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">Master CSS Grid & Flexbox in One Video</div>
+            <div class="channel-name">DevDesign</div>
+            <div class="video-stats">2.4M views · 2 weeks ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">5:45</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">Easy Pasta Recipes for Beginners</div>
+            <div class="channel-name">TastyKitchen</div>
+            <div class="video-stats">540K views · 5 days ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">15:10</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">AI Tools That Will Change Your Workflow</div>
+            <div class="channel-name">TechInsider</div>
+            <div class="video-stats">3.1M views · 4 days ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">9:58</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">Morning Yoga Routine for Flexibility</div>
+            <div class="channel-name">ZenFlow</div>
+            <div class="video-stats">760K views · 2 days ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">22:30</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">JavaScript Promises Explained Simply</div>
+            <div class="channel-name">JSMastery</div>
+            <div class="video-stats">1.8M views · 1 month ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">7:15</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">The History of the Internet</div>
+            <div class="channel-name">MindExpand</div>
+            <div class="video-stats">445K views · 3 weeks ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">18:44</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">Building a Game in Python – Full Tutorial</div>
+            <div class="channel-name">PyPlay</div>
+            <div class="video-stats">675K views · 6 days ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">4:30</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">World Cup Highlights – Best Goals</div>
+            <div class="channel-name">SportZone</div>
+            <div class="video-stats">5.2M views · 1 day ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">11:22</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">Interior Design on a Budget – Room Makeover</div>
+            <div class="channel-name">HomeMade</div>
+            <div class="video-stats">980K views · 2 weeks ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <div class="thumbnail"><span class="duration">6:05</span></div>
+        <div class="card-meta cf">
+          <div class="avatar"></div>
+          <div class="video-info">
+            <div class="video-title">Electric Cars Explained in 6 Minutes</div>
+            <div class="channel-name">GreenDrive</div>
+            <div class="video-stats">320K views · 4 weeks ago</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /video-grid -->
+  </div><!-- /main -->
+</div><!-- /wrapper -->
+
+</body>
+</html>
