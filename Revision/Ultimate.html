@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate HTML and CSS crash course</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ultimate HTML and CSS crash course</h1>
+    </header>
+    <main>
+        <h2> 1.Table</h2>
+        <table>
+            <tr>
+                <th rowspan="2">Cell</th>
+                <th colspan="2">0-15</th>
+                <th colspan="2">16-35</th>
+                <th colspan="2">36-45</th>
+                <th colspan="2">56-above</th>
+            </tr>
+            <tr>
+                <th>Men</th>
+                <th>Women</th>
+                <th>Men</th>
+                <th>Women</th>
+                <th>Men</th>
+                <th>Women</th>
+                <th>Men</th>
+                <th>Women</th>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>800</td>
+                <td>700</td>
+                <td>700</td>
+                <td>800</td>
+                <td>900</td>
+                <td>900</td>
+                <td>800</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>800</td>
+                <td>700</td>
+                <td>700</td>
+                <td>800</td>
+                <td>900</td>
+                <td>900</td>
+                <td>800</td>
+                <td>800</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <th colspan="2">1500</th>
+                <th colspan="2">1500</th>
+                <th colspan="2">1800</th>
+                <th colspan="2">1500</th>
+            </tr>
+        </table>
+        <h2> 2.Form</h2>
+        <form action="#" method="get">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your fullname"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+            <label for="gender">Gender:</label><br>
+            <input type="radio" id="male" value="Male">Male
+            <input type="radio" id="female" value="Female">Female<br><br>
+            <label for="languages">Languages:</label><br>
+            <input type="checkbox" name="Languages" value="Kinyarwanda">Kinyarwanda<br>
+            <input type="checkbox" name="Languages" value="French">French<br>
+            <input type="checkbox" name="Languages" value="Kiswahili">Kiswahili<br>
+            <input type="checkbox" name="Languages" value="English">English<br><br>
+            <label for="Levels">Levels:</label><br>
+            <select>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Pro">Pro</option>
+            </select><br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="Password" name="Password"><br><br>
+            <label for="Request">Request:</label><br>
+            <textarea id="Request" name="Request"></textarea><br><br>
+            <button type="submit">Create account</button><br><br>
+        </form>
+        <h2> 3.Lists</h2>
+        <ol>
+            <li>KARONGI
+                <ol type="a">
+                    <li>BWISHYURA</li>
+                    <li>GITESI</li>
+                    <li>MUBUGA</li>
+                    <li>MURAMBI</li>
+                    <li>MURUNDI</li>
+                </ol>
+            </li>
+            <li>NYABIHU
+                <ol type="a">
+                    <li>BIGOGWE</li>
+                    <li>KARABO</li>
+                    <li>JENDA</li>
+                    <li>JOMBA</li>
+                    <li>MUKAMIRA</li>
+                </ol>
+            </li>
+            <li>RUTSIRO
+                <ol type="a">
+                    <li>BONEZA</li>
+                    <li>GIHANGO</li>
+                    <li>KIGEYO</li>
+                    <li>KIVUMU</li>
+                    <li>MANIHIRA</li>
+                </ol>
+            </li>
+        </ol>
+        <h2> 4.Graphics</h2>
+        <figure>
+            <figcaption>Fig: I'll reach the top</figcaption>
+            <img src="Success.jpeg" alt="I'll ace this exam" width="600" height="600">
+        </figure>
+        <video controls width="800" height="600" >
+            <source src="BSG_SoilSmart.mp4" type="video/mp4">
+        </video>
+        <iframe
+        width="500" height="300"
+        src="https://www.youtube.com/embed/qz0aGYrrlhU?si=bC-_kDVREerOEyu9"
+        title="Youtube video player"
+        frameborder="0"
+        allowfullscreen
+        >
+        </iframe>
+        <svg>
+            <circle cx="100" cy="100" r="45" stroke="brown" stroke-width="5" fill="white"/>
+            <rect x="50" y="50" width="100" height="100" stroke="green" stroke-width="5" fill="white"/>
+            <rect x="100" y="50" width="100" height="50" stroke="lightblue" stroke-width="5" fill="white"/>
+            <tspan X="70" dy="30">Figures in HTML</tspan>
+        </svg>
+    </main>    
+</body>
+</html>
