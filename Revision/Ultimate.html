@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ultimate HTML and CSS crash course</title>
     <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+        }
+        table:hover{
+            transform:scale(1.1);
+            box-shadow: 0 10px 20px lightgreen;
+
+
+        }
+        td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th{
+            border: 1px solid black;
+            border-collapse: collapse;
+            color:green;
+        }
+        h2{
+            color: gold;
+        }
+        form{
+            text-align:center;
+            border: 5px solid gold;
+            border-collapse:collapse;
+            border-radius:50px;
+        }
+        input{
+            border-radius:50px;
+        }
+        button{
+            border-radius:50px;
+            color:green;
+            border: 3px solid green;
+            background-color:gold;
+        }
+
 
     </style>
 </head>
@@ -72,9 +112,9 @@
             <input type="radio" id="male" value="Male">Male
             <input type="radio" id="female" value="Female">Female<br><br>
             <label for="languages">Languages:</label><br>
-            <input type="checkbox" name="Languages" value="Kinyarwanda">Kinyarwanda<br>
-            <input type="checkbox" name="Languages" value="French">French<br>
-            <input type="checkbox" name="Languages" value="Kiswahili">Kiswahili<br>
+            <input type="checkbox" name="Languages" value="Kinyarwanda">Kinyarwanda
+            <input type="checkbox" name="Languages" value="French">French
+            <input type="checkbox" name="Languages" value="Kiswahili">Kiswahili
             <input type="checkbox" name="Languages" value="English">English<br><br>
             <label for="Levels">Levels:</label><br>
             <select>

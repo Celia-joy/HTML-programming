@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #header{
+            width:100%;
+            background-color: green;
+            height:10vh;
+        }
+        #leftsidebar{
+            width:20%;
+            background-color: pink;
+            height:26.6vh;
+        }
+        #middle{
+            width:20%;
+            background-color: orange;
+            height:26.6vh;
+        }
+        #rightsidebar{
+            width:20%;
+            background-color: yellow;
+            height:26.6vh;
+        }
+        #edge{
+            width:40%;
+            background-color: purple;
+            height:80vh;
+        }
+        #down1{
+            background-color: blue;
+            width:60%;
+            height:26.6vh;
+        }
+        #down2{
+            background-color: red;
+            width:60%;
+            height:26.6vh;
+        }        
+        #footer{
+            background-color: aqua;
+            width:100%;
+            height:10vh;
+        }
+        #leftsidebar, #middle, #rightsidebar, #edge, #down1, #down2{
+            float:left;
+        }
+        #edge{
+            float:right;
+        }
+        #footer{
+            clear:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id="header">Header</div>
+        <div id="leftsidebar">Left side bar</div>
+        <div id="middle">Middle</div>
+        <div id="rightsidebar">Right side bar</div>
+        <div id="edge">Edge</div>
+        <div id="down1">Down 1</div>
+        <div id="down2">Down 2</div>
+        <div id="footer">Footer</div>
+
+    </div>
+</body>
+</html>
