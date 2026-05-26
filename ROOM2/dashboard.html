@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Manager Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="school-shell">
+    <aside class="sidebar">
+      <div class="logo">
+        <img class="logo-img" src="assets/rtb-logo.png" alt="RTB Rwanda TVET Board">
+      </div>
+
+      <nav>
+        <a class="nav-item active" href="dashboard.html">
+          <span class="nav-icon">▦</span><span class="nav-text">Home</span><span></span>
+        </a>
+        <a class="nav-item" href="transfers.html">
+          <span class="nav-icon">♟</span><span class="nav-text">Recruitment</span><span class="nav-arrow">›</span>
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon">▭</span><span class="nav-text">Performance</span><span class="nav-arrow">›</span>
+        </a>
+        <a class="nav-item" href="#">
+          <span class="nav-icon">◈</span><span class="nav-text">Payment</span><span class="nav-arrow">›</span>
+        </a>
+      </nav>
+
+      <a class="logout" href="login.html"><span class="nav-icon">⊂</span><span>Logout</span></a>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div class="breadcrumbs">School Manager &nbsp; / &nbsp; Dashboard &nbsp; / &nbsp; <b>Home</b></div>
+        <input class="search" value="Search Anything Here" aria-label="Search">
+        <div class="top-actions"><span class="bell">♟</span><span class="avatar"></span></div>
+      </header>
+
+      <section class="dashboard-content">
+        <div class="school-pill">My School</div>
+
+        <div>
+          <div class="metric-grid">
+            <div class="metric-card"><span>Pending Transfers</span><strong class="metric-value">5,789</strong></div>
+            <div class="metric-card"><span>Active Trainers</span><strong class="metric-value">5,789</strong></div>
+            <div class="metric-card"><span>Posted Vacant Posts</span><strong class="metric-value">5,789</strong></div>
+            <div class="metric-card"><span>Rejected Trainers</span><strong class="metric-value">5,789</strong></div>
+            <div class="metric-card"><span>Promotion Deservers</span><strong class="metric-value">5,789</strong></div>
+            <div class="metric-card"><span>Planned Budget</span><strong class="metric-value">5,789</strong></div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-legend">Promotion Receivers</div>
+            <svg viewBox="0 0 560 230" width="100%" height="245" role="img" aria-label="Promotion Receivers Chart">
+              <defs>
+                <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                  <stop offset="0" stop-color="#bfe8ff" stop-opacity=".9"></stop>
+                  <stop offset="1" stop-color="#eaf8ff" stop-opacity=".9"></stop>
+                </linearGradient>
+              </defs>
+              <g fill="#58616b" font-size="12">
+                <text x="4" y="46">20</text><text x="10" y="88">15</text><text x="10" y="130">10</text><text x="16" y="172">5</text><text x="16" y="214">0</text>
+                <text x="70" y="226">2017</text><text x="182" y="226">2018</text><text x="294" y="226">2019</text><text x="406" y="226">2020</text><text x="522" y="226">2021</text>
+              </g>
+              <path d="M40 210 C70 128 112 112 150 122 S207 134 230 48 S284 146 327 166 S388 112 430 76 S503 65 548 58 L548 210 Z" fill="url(#chartFill)"></path>
+              <path d="M40 210 C70 128 112 112 150 122 S207 134 230 48 S284 146 327 166 S388 112 430 76 S503 65 548 58" fill="none" stroke="#20a9e8" stroke-width="2"></path>
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          <section class="panel">
+            <div class="panel-title">My Performance</div>
+            <div class="performance"><div class="donut"></div></div>
+          </section>
+
+          <section class="panel" style="margin-top:26px;">
+            <div class="panel-title">Incoming Transfers</div>
+            <div class="incoming-list">
+              <div class="incoming-name">Vraiment Donc😂</div>
+              <div class="incoming-name">Vraiment Donc😂</div>
+              <div class="incoming-name">Uwimanimpage Clarisse</div>
+              <div class="incoming-name">Uwimanimpage Clarisse</div>
+              <a class="blue-btn" href="transfers.html">View All</a>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
